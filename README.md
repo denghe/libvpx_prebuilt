@@ -5,11 +5,18 @@ how to build libvpx .lib .a
 https://github.com/webmproject/libvpx
 
 # 1. windows
-https://github.com/ShiftMediaProject/VSYASM.git
-https://github.com/ShiftMediaProject/libvpx.git
+env: windows + MSYS2 MinGW x64
+first, copy or clone libvpx into msys64's home
+then, create build directory & enter, execute following command:
+```
+../libvpx/configure --target=x86_64-win64-vs17 --disable-examples --disable-unit-tests --disable-tools --disable-docs --disable-vp8_encoder --disable-vp8_decoder --disable-vp9_encoder --disable-webm_io --disable-libyuv
+make
+```
+then, open vpx.sln, switch to Release, compile.
+
 
 # 2. android
-compile system: ubuntu / mac
+system env: linux / mac
 download latest ndk or install by android studio
 
 # create a directory like libvpx_armv7.  then create sub directory "jni"，enter,
