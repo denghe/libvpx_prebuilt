@@ -6,13 +6,18 @@ https://github.com/webmproject/libvpx
 
 # 1. windows
 env: windows + MSYS2 MinGW x64
-first, copy or clone libvpx into msys64's home
-then, create build directory & enter, execute following command:
+
+1. copy or clone libvpx into msys64's home
+2. copy yasm.exe into  msys64's usr/bin
+3. create build directory & enter, execute following command:
 ```
+
 ../libvpx/configure --target=x86_64-win64-vs17 --disable-examples --disable-unit-tests --disable-tools --disable-docs --disable-vp8_encoder --disable-vp8_decoder --disable-vp9_encoder --disable-webm_io --disable-libyuv
+
 make
+
 ```
-then, open vpx.sln, switch to Release, compile.
+4. open vpx.sln, switch to Release, compile.
 
 
 # 2. android
