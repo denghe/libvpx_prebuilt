@@ -20,7 +20,7 @@ file(GLOB_RECURSE SRCS
 if (IOS)
 	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fembed-bitcode")
 	set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fembed-bitcode")
-	set(CMAKE_OSX_ARCHITECTURES "arm64")
+	set(CMAKE_OSX_ARCHITECTURES "arm64;x86_64")
 #	set_xcode_property (${name} IPHONEOS_DEPLOYMENT_TARGET "13.0")
 	add_library(${name} STATIC ${SRCS})
 else ()
