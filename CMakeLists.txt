@@ -8,7 +8,7 @@ endif ()
 project(${name})
 
 include_directories(
-	./
+		gnusrc
 )
 
 set(SRCS)
